@@ -1,0 +1,23 @@
+// =================================================================
+// New dependencies to add to your portfolio's package.json
+// =================================================================
+// Add these to the "dependencies" section:
+//
+//   "ai": "^6.0.0",
+//   "@ai-sdk/react": "^3.0.0",
+//   "@openrouter/ai-sdk-provider": "^2.9.0",
+//   "zod": "^3.25.0"
+//
+// Or just run from your project root:
+//
+//   npm install ai@^6.0.0 @ai-sdk/react@^3.0.0 @openrouter/ai-sdk-provider@^2.9.0 zod@^3.25.0
+//
+// =================================================================
+// Versions verified against npm registry on May 18, 2026.
+// TypeScript compilation passed clean against this combination.
+// =================================================================
+//
+// - ai@6.x         Vercel AI SDK — streamText + tool calling + UIMessage streaming
+// - @ai-sdk/react  React hooks: useChat with DefaultChatTransport
+// - @openrouter/   Community provider, full tool-calling support, peer-deps ai@^6
+// - zod            Schema validation for tool inputs

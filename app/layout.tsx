@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
 import Nav from "@/components/Nav";
+import AgentLauncher from "@/components/AgentLauncher";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://taiyab.autostrata.ai"),
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Cursor />
         <Nav />
         {children}
+        <AgentLauncher />
       </body>
     </html>
   );

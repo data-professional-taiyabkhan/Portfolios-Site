@@ -26,7 +26,7 @@ export const projects: Project[] = [
   client: "Self · taiyab.autostrata.ai",
   year: "2026",
   role: "Architecture, prompt design, implementation",
-  category: "personal",
+  category: "client",
   oneLiner:
     "An agentic AI you can actually try, right here. Same architectural pattern as the HEART AI I built for a paid client.",
   summary:

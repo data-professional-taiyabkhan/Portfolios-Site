@@ -7,7 +7,7 @@ const stats = [
   { label: "Years experience", value: "3+", note: "Combined data + AI + full-stack" },
   { label: "Paid clients shipped", value: "6", note: "Via Autostrata.ai" },
   { label: "Research papers", value: "1", note: "Peer-reviewed preprint" },
-  { label: "Visa runway", value: "Jan 2027", note: "UK Graduate Visa" },
+  { label: "Based in", value: "Egham, Surrey, UK", note: "UK Graduate Visa" },
 ];
 
 const milestones = [
@@ -53,9 +53,7 @@ export default function About() {
               data stories that nobody asked for but I couldn&apos;t stop thinking about.
             </p>
             <p className="mt-6 text-lg text-ink-soft leading-relaxed max-w-2xl">
-              I&apos;m looking for a UK-sponsored role as a Data Analyst, Data Scientist, or
-              Data/AI Engineer where I can own both the analytics and the implementation.
-              My Graduate visa runs until January 2027.
+              I&apos;m focused on data, ML, and AI engineering work — both as part of a strong team and through Autostrata. I split my time between client delivery, original research, and applied AI projects.
             </p>
           </div>
 
@@ -82,10 +80,9 @@ export default function About() {
             </div>
             <div className="border border-line rounded-2xl p-5 bg-paper-deep/40">
               <Sparkles className="w-5 h-5 text-accent mb-3" />
-              <p className="font-medium">Sponsor-friendly</p>
+              <p className="font-medium">Visa status</p>
               <p className="text-sm text-mute mt-1">
-                UK Graduate Visa valid until Jan 2027. Open to Skilled Worker sponsorship.
-                Will relocate within the UK; open to UAE, EU, or India as alternatives.
+                UK Graduate Visa, valid through January 2027. Currently building from Egham, Surrey.
               </p>
             </div>
           </div>

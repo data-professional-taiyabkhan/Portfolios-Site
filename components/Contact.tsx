@@ -32,14 +32,12 @@ export default function Contact() {
         <div className="grid md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-6">
             <p className="text-xl md:text-2xl leading-relaxed text-paper/85 max-w-2xl">
-              I&apos;m available for full-time data, ML, or AI engineering roles in the UK
-              (sponsor-licensed companies, please), and for freelance / contract work
-              via Autostrata.
+              I&apos;m available for full-time data, ML, or AI engineering roles, and for freelance / contract work via Autostrata. Always happy to hear about research opportunities too.
             </p>
             <div className="mt-10 inline-flex items-center gap-3 px-5 py-3 border border-paper/20 rounded-full">
               <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse" />
               <span className="text-sm">
-                Available · Open to UK sponsorship · Graduate Visa to Jan 2027
+                Available · Egham, Surrey · UK
               </span>
             </div>
           </div>

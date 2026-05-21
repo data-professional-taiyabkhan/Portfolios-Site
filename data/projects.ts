@@ -20,6 +20,43 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+  slug: "portfolio-ai-agent",
+  number: "00",
+  title: "This site's AI assistant",
+  client: "Self · taiyab.autostrata.ai",
+  year: "2026",
+  role: "Architecture, prompt design, implementation",
+  category: "personal",
+  oneLiner:
+    "An agentic AI you can actually try, right here. Same architectural pattern as the HEART AI I built for a paid client.",
+  summary:
+    "A purpose-built agent with strict tool routing, closed knowledge boundary, and real-world side effects. It can answer questions about my work, check my calendar, and book a 15-minute call without ever leaving the chat. Built so visitors don't have to email-tag to get a meeting.",
+  tags: ["Agentic AI", "Tool calling", "Claude Haiku 4.5", "Vercel AI SDK", "Cal.com API", "Resend"],
+  metrics: [
+    { label: "Tools wired", value: "3" },
+    { label: "Refusal rules", value: "9" },
+    { label: "Avg cost/turn", value: "~$0.005" },
+  ],
+  problem:
+    "A portfolio's job is to make a recruiter or client think 'I want to talk to this person.' Most portfolios then make that next step painful — find the email, write the email, hope for a reply. I wanted one chat surface that could answer questions, check my actual calendar, and book a call without the user leaving the page.",
+  approach: [
+    "Vercel AI SDK with Claude Haiku 4.5 via OpenRouter for the agent loop with tool-calling.",
+    "Closed knowledge boundary: a hand-curated knowledge base is the agent's only source of truth. No web search, no general knowledge.",
+    "Three tools: check_availability + book_meeting (Cal.com API v2), and leave_message (Resend).",
+    "Hard refusal patterns: never negotiates, never commits on offers, never speaks as me, never invents facts.",
+    "Anti-abuse: per-IP rate limits (50 messages/day, 20 per 10 minutes), session message cap.",
+    "Floating launcher reveals after the hero scroll, with a slide-out drawer matching the site's editorial design tokens.",
+  ],
+  stack: ["Vercel AI SDK", "Claude Haiku 4.5", "OpenRouter", "Cal.com API v2", "Resend", "Next.js 14", "TypeScript"],
+  outcomes: [
+    "Real in-chat booking — visitor picks a slot, it appears on my calendar with no link redirect.",
+    "Messages route directly to my inbox with reply-to set to the visitor, so I respond in two clicks.",
+    "Architecture mirrors the HEART AI I built for a paid client — same closed-boundary, tool-routing pattern.",
+  ],
+  links: [{ label: "Try it", href: "#" }],
+  highlight: true,
+  },
+  {
     slug: "clock-in-pro",
     number: "01",
     title: "Clock-in Pro",

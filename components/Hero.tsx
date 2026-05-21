@@ -38,7 +38,7 @@ export default function Hero() {
         >
           <span className="eyebrow flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse" />
-            Available · Open to UK sponsorship
+            Available · Egham, Surrey · UK 
           </span>
           <span className="eyebrow flex items-center gap-1.5">
             <MapPin className="w-3 h-3" /> Egham · Surrey · UK

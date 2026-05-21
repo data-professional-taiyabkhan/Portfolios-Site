@@ -4,7 +4,7 @@ const items = [
   "I build AI products that move from idea → demo → deployed",
   "Royal Holloway MSc · Merit",
   "Co-Founder · Autostrata.ai",
-  "Open to UK sponsorship",
+  "Currently building in the UK",
   "Published in Zenodo",
   "Six paid clients shipped",
   "Available · Egham, UK",

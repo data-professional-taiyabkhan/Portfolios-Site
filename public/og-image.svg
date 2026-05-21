@@ -9,7 +9,7 @@
   <rect width="1200" height="630" filter="url(#grain)" opacity="0.5"/>
   <line x1="0" y1="210" x2="1200" y2="210" stroke="#D9D2C2" stroke-width="1"/>
   <line x1="0" y1="420" x2="1200" y2="420" stroke="#D9D2C2" stroke-width="1"/>
-  <text x="80" y="80" font-family="JetBrains Mono, monospace" font-size="14" fill="#6B6760" letter-spacing="2">DATA &amp; AI ENGINEER · UK · OPEN TO SPONSORSHIP</text>
+  <text x="80" y="80" font-family="JetBrains Mono, monospace" font-size="14" fill="#6B6760" letter-spacing="2">DATA &amp; AI ENGINEER · ROYAL HOLLOWAY MSC · LONDON</text>
   <text x="80" y="280" font-family="Instrument Serif, Georgia, serif" font-size="120" fill="#1A1A1A">Mohammad</text>
   <text x="80" y="400" font-family="Instrument Serif, Georgia, serif" font-size="120" fill="#C8553D" font-style="italic">Taiyab Khan.</text>
   <text x="80" y="510" font-family="DM Sans, sans-serif" font-size="32" fill="#3A3A3A">I build AI products that move from idea → demo → deployed.</text>

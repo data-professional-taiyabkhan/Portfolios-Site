@@ -16,7 +16,7 @@ const milestones = [
   { year: "2023", text: "Moved from Delhi to London. Started MSc Data Science & Analytics at Royal Holloway." },
   { year: "2024", text: "Graduated with Merit. Dissertation on football sentiment analysis." },
   { year: "2025", text: "Co-founded Autostrata.ai. Shipped Clock-in Pro, MummyHelp, HEART-Eco." },
-  { year: "2026", text: "Published EURO 2024 paper. Currently looking for UK sponsored roles." },
+  { year: "2026", text: "Published EURO 2024 paper. Built this site's AI assistant — booking, messaging, and Q&A via tool-calling." },
 ];
 
 export default function About() {

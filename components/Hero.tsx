@@ -18,6 +18,12 @@ export default function Hero() {
     return () => clearInterval(id);
   }, []);
 
+  const openAgent = () => {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("open-agent-drawer"));
+    }
+  };
+
   return (
     <section
       id="top"
@@ -38,7 +44,7 @@ export default function Hero() {
         >
           <span className="eyebrow flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse" />
-            Available · Egham, Surrey · UK 
+            Available for work
           </span>
           <span className="eyebrow flex items-center gap-1.5">
             <MapPin className="w-3 h-3" /> Egham · Surrey · UK
@@ -93,30 +99,41 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.1 }}
           className="mt-14 md:mt-24 grid md:grid-cols-12 gap-6 items-end"
         >
-          <p className="md:col-span-6 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
-            Data &amp; AI Engineer. Co-Founder at{" "}
-            <a href="https://autostrata.ai" target="_blank" rel="noreferrer" className="text-accent link">
-              Autostrata.ai
-            </a>
-            . Royal Holloway MSc, Merit. Published researcher. Currently shipping ML and full-stack products for paid clients.
-          </p>
-          <p className="mt-4 text-sm text-mute flex items-center gap-2">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-moss animate-pulse" />
-            Got a question? Try the <span className="text-accent font-medium">AI version of me</span> in the corner ↘
-          </p>
-          <div className="md:col-span-6 md:col-start-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-end">
+          <div className="md:col-span-6 max-w-2xl">
+            <p className="text-lg md:text-xl text-ink-soft leading-relaxed">
+              Data &amp; AI Engineer. Co-Founder at{" "}
+              <a href="https://autostrata.ai" target="_blank" rel="noreferrer" className="text-accent link">
+                Autostrata.ai
+              </a>
+              . Royal Holloway MSc, Merit. Published researcher. Currently shipping ML and full-stack products for paid clients.
+            </p>
+            <p className="mt-5 text-sm text-mute flex items-center gap-2 flex-wrap">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-moss animate-pulse" />
+              <span>Got a question?</span>
+              <button
+                type="button"
+                onClick={openAgent}
+                className="text-accent font-medium underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors"
+              >
+                Try the AI version of me
+              </button>
+              <span>in the corner ↘</span>
+            </p>
+          </div>
+
+          <div className="md:col-span-5 md:col-start-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-end">
             <a
               href="#work"
               className="group flex items-center gap-2 px-6 py-3 bg-ink text-paper rounded-full hover:bg-accent transition-colors duration-300"
             >
-              View work
+              View selected work
               <ArrowDownRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
             </a>
             <a
-              href="#contact"
+              href="#research"
               className="group flex items-center gap-2 px-6 py-3 border border-ink rounded-full hover:bg-ink hover:text-paper transition-colors duration-300"
             >
-              Get in touch
+              Read research
             </a>
           </div>
         </motion.div>

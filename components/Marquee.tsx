@@ -7,7 +7,6 @@ const items = [
   "Currently building in the UK",
   "Published in Zenodo",
   "Six paid clients shipped",
-  "Available · Egham, UK",
 ];
 
 export default function Marquee() {

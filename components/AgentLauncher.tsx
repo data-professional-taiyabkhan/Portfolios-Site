@@ -9,6 +9,16 @@ export default function AgentLauncher() {
   const [visible, setVisible] = useState(false);
   const [hintShown, setHintShown] = useState(false);
 
+  // Listen for "open-agent-drawer" events fired from elsewhere on the page (e.g. the Hero button)
+  useEffect(() => {
+    const handler = () => {
+      setVisible(true);
+      setOpen(true);
+    };
+    window.addEventListener("open-agent-drawer", handler);
+    return () => window.removeEventListener("open-agent-drawer", handler);
+  }, []);
+
   // Reveal after scrolling past the hero, so it doesn't compete with first impression
   useEffect(() => {
     const onScroll = () => {

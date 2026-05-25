@@ -55,6 +55,10 @@ export default function About() {
             <p className="mt-6 text-lg text-ink-soft leading-relaxed max-w-2xl">
               I&apos;m focused on data, ML, and AI engineering work — both as part of a strong team and through Autostrata. I split my time between client delivery, original research, and applied AI projects.
             </p>
+            <p className="mt-6 text-sm text-mute leading-relaxed max-w-2xl border-l-2 border-accent/30 pl-4 italic">
+          <span className="font-mono text-[0.65rem] uppercase tracking-wider text-accent not-italic block mb-1">Currently</span>
+            Building agentic AI patterns for clients via Autostrata, and writing about what I learn — most recently, the AI assistant on this site.
+            </p>
           </div>
 
           <div className="md:col-span-4 md:col-start-9 space-y-6">

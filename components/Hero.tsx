@@ -100,6 +100,10 @@ export default function Hero() {
             </a>
             . Royal Holloway MSc, Merit. Published researcher. Currently shipping ML and full-stack products for paid clients.
           </p>
+          <p className="mt-4 text-sm text-mute flex items-center gap-2">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-moss animate-pulse" />
+            Got a question? Try the <span className="text-accent font-medium">AI version of me</span> in the corner ↘
+          </p>
           <div className="md:col-span-6 md:col-start-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-end">
             <a
               href="#work"

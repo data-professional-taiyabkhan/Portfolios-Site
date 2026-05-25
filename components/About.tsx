@@ -37,11 +37,25 @@ export default function About() {
           className="grid md:grid-cols-12 gap-8 mb-20"
         >
           <div className="md:col-span-7">
-            <p className="font-display text-display-md text-ink leading-[1.15]">
-              I started in <span className="italic">Delhi</span>, learning data and machine
-              learning between IIT Madras and Jamia. I moved to <span className="italic">London</span>{" "}
-              in 2023 for an MSc at Royal Holloway, and stayed to build.
-            </p>
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 mb-8 sm:items-start">
+              <figure className="flex-shrink-0 w-32 sm:w-40 md:w-44">
+                <div className="overflow-hidden rounded-sm border border-line">
+                  <img
+                    src="/portrait.jpg"
+                    alt="Mohammad Taiyab Khan in London, 2025"
+                    className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+                <figcaption className="font-mono text-[0.65rem] uppercase tracking-wider text-mute mt-2">
+                  London · 2025
+                </figcaption>
+              </figure>
+              <p className="font-display text-display-md text-ink leading-[1.15]">
+                I started in <span className="italic">Delhi</span>, learning data and machine
+                learning between IIT Madras and Jamia. I moved to <span className="italic">London</span>{" "}
+                in 2023 for an MSc at Royal Holloway, and stayed to build.
+              </p>
+            </div>
             <p className="mt-8 text-lg text-ink-soft leading-relaxed max-w-2xl">
               Today I&apos;m a Data &amp; AI Engineer and Co-Founder of{" "}
               <a href="https://autostrata.ai" target="_blank" rel="noreferrer" className="link text-accent">

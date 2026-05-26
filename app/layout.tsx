@@ -3,6 +3,7 @@ import "./globals.css";
 import Cursor from "@/components/Cursor";
 import Nav from "@/components/Nav";
 import AgentLauncher from "@/components/AgentLauncher";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://taiyab.autostrata.ai"),
@@ -36,6 +37,7 @@ export default function RootLayout({
         <Nav />
         {children}
         <AgentLauncher />
+        <Analytics />
       </body>
     </html>
   );

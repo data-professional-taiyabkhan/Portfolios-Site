@@ -76,7 +76,7 @@ export const PROJECTS = [
   {
     name: "Clock-in Pro",
     type: "Paid client project (via Autostrata)",
-    year: "2025",
+    year: "2026",
     oneLiner:
       "Face-verified, GPS-geofenced attendance platform for a 45-employee operation across 3 sites.",
     stack:
@@ -89,6 +89,24 @@ export const PROJECTS = [
       "Saved ~4.5 admin hours per week",
     ],
     link: "https://github.com/data-professional-taiyabkhan/clock-in-pro",
+  },
+  {
+  name: "Weft Passport",
+  type: "Paid client project (via Autostrata)",
+  year: "2026",
+  oneLiner:
+    "A SKU-level textile-provenance and compliance platform for handwoven South Asian textiles.",
+  description:
+    ["A SKU-level textile-provenance and compliance platform for handwoven South Asian textiles. Brands record an item's artisan, loom, place and photos, an admin certifies the batch, and the system produces a public QR provenance page for shoppers plus a regulator-ready compliance record. Built to meet incoming EU rules (ECGT, Digital Product Passport) and the UK Green Claims Code.",
+    "Multi-tenant model: artisan → loom → batch → SKU, with admin / brand / coordinator roles",
+    "Public consumer passport readable by anonymous visitors via Postgres RLS",
+    "Full batch lifecycle wired: capture → submit → certify",],
+  metrics: [
+    "End-to-end loop working: a batch captured in the field becomes a scannable public provenance page plus a compliance record.",
+    "Built thin and standard by design — the client's moat is its field methodology and dataset, not the software layer.",
+  ],
+  links: [{ label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/weft-passport" }],
+  stack: "Next.js 14 + TypeScript + Supabase (Postgres, Auth, Row-Level Security), deployed on Vercel",
   },
   {
     name: "MummyHelp",
@@ -126,7 +144,7 @@ export const PROJECTS = [
   {
     name: "Sartorial London",
     type: "Paid client project (via Autostrata)",
-    year: "2025",
+    year: "2025-26",
     oneLiner:
       "Custom Sharetribe Flex marketplace for designer outfit rentals with fixed 5-day windows and Stripe security-deposit flow.",
     stack: "Sharetribe Flex, Stripe Payments, React, Node/Express (TypeScript), Tailwind.",
@@ -141,7 +159,7 @@ export const PROJECTS = [
   },
   {
     name: "Predicting EURO 2024 via Social Media Sentiment",
-    type: "MSc Dissertation, peer-reviewed preprint on Zenodo",
+    type: "MSc Dissertation, preprint on Zenodo",
     year: "2024",
     oneLiner:
       "The model with the worst benchmark score succeeded where the best benchmark model failed. Demonstrates that benchmark accuracy and domain sensitivity measure different things.",

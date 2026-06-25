@@ -57,8 +57,44 @@ export const projects: Project[] = [
   highlight: true,
   },
   {
+  slug: "weft-passport",
+  number: "02",
+  title: "Weft Passport",
+  client: "Paid client · via Autostrata",
+  year: "2026",
+  role: "Solo full-stack engineer",
+  category: "client",
+  oneLiner:
+    "SKU-level proof-of-origin for handwoven textiles — so ethical fashion brands can prove their claims before EU law forces them to.",
+  summary:
+    "A provenance and compliance platform for handwoven South Asian textiles. A garment's artisan, loom, place and photos are captured at source, an admin certifies the batch, and the system produces a public QR provenance page for shoppers plus a regulator-ready compliance record for the brand.",
+  tags: ["Next.js 14", "TypeScript", "Supabase", "Postgres RLS", "Vercel", "Provenance / Compliance"],
+  metrics: [
+    { label: "Modules", value: "4" },
+    { label: "Data model", value: "Artisan → Loom → Batch → SKU" },
+    { label: "Status", value: "Live in production" },
+  ],
+  problem:
+    "Machine-made cloth is routinely sold as handwoven, and incoming regulation (EU ECGT, the textile Digital Product Passport, the UK Green Claims Code) means brands must be able to prove 'handwoven' and 'ethical-origin' claims or face penalties. There was no simple, SKU-level way to record provenance at source and hand a brand the proof.",
+  approach: [
+    "Multi-tenant data model — artisan, household, loom, batch and SKU — with role-based access for admins, brands and field coordinators.",
+    "Field verification flow to record an artisan, loom and batch with supporting photos.",
+    "Batch certification lifecycle wired end-to-end: capture → submit → certify.",
+    "Public consumer provenance page, readable by anonymous visitors via dedicated Postgres Row-Level Security policies, reached by a QR code.",
+    "Certification and compliance layer that turns a certified batch into a brand-facing, regulator-ready record.",
+  ],
+  stack: ["Next.js 14", "TypeScript", "Supabase", "PostgreSQL", "Row-Level Security", "Tailwind", "Vercel"],
+  outcomes: [
+    "Live in production with the founding client.",
+    "End-to-end loop working: a batch captured in the field becomes a scannable public provenance page plus a compliance record.",
+    "Built thin and standard by design — the client's moat is its field methodology and dataset, not the software layer.",
+  ],
+  links: [{ label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/weft-passport" }],
+  highlight: true,
+  },
+  {
     slug: "clock-in-pro",
-    number: "01",
+    number: "02",
     title: "Clock-in Pro",
     client: "Paid client · via Autostrata",
     year: "2025",
@@ -96,7 +132,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mummyhelp",
-    number: "02",
+    number: "03",
     title: "MummyHelp",
     client: "Paid client · via Autostrata",
     year: "2025",
@@ -134,7 +170,7 @@ export const projects: Project[] = [
   },
   {
     slug: "heart-eco",
-    number: "03",
+    number: "04",
     title: "HEART-Eco · HEART AI",
     client: "Paid client · via Autostrata",
     year: "2025–26",
@@ -174,7 +210,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sartorial-london",
-    number: "04",
+    number: "05",
     title: "Sartorial London",
     client: "Paid client · via Autostrata",
     year: "2025",
@@ -210,7 +246,7 @@ export const projects: Project[] = [
   },
   {
     slug: "euro-2024-paper",
-    number: "05",
+    number: "06",
     title: "Predicting EURO 2024 via Social Media Sentiment",
     client: "MSc Dissertation · Royal Holloway, University of London",
     year: "2024",
@@ -246,7 +282,7 @@ export const projects: Project[] = [
   },
   {
     slug: "nba-shot-analysis",
-    number: "06",
+    number: "07",
     title: "NBA Shot Selection Shift",
     client: "Personal research",
     year: "2025",
@@ -279,7 +315,7 @@ export const projects: Project[] = [
   },
   {
     slug: "uk-sponsorship-map",
-    number: "07",
+    number: "08",
     title: "UK Visa Sponsorship Companies Map",
     client: "Open-source tool",
     year: "2024",
@@ -311,7 +347,7 @@ export const projects: Project[] = [
   },
   {
     slug: "aapl-risk-analysis",
-    number: "08",
+    number: "09",
     title: "AAPL Multi-Horizon Risk Analysis",
     client: "Personal research · finance module spin-out",
     year: "2025",
@@ -344,7 +380,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gurucool-recsys",
-    number: "09",
+    number: "10",
     title: "Gurucool Recommendation System",
     client: "Gurucool XYZ Pvt Ltd",
     year: "2022–23",
@@ -377,7 +413,7 @@ export const projects: Project[] = [
   },
   {
     slug: "alzheimers-mri",
-    number: "10",
+    number: "11",
     title: "Alzheimer's Detection from Brain Scans",
     client: "BSc Final Project · Jamia Millia Islamia",
     year: "2023",

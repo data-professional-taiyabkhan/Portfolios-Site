@@ -313,9 +313,50 @@ export const projects: Project[] = [
       "Posted on LinkedIn with a one-page infographic poster.",
     ],
   },
+
+  {
+  slug: "clarivance-ai",
+  number: "08",
+  title: "Clarivance AI",
+  client: "Paid client · via Autostrata",
+  year: "2026",
+  role: "Site build, code audit, HMRC integration scoping",
+  category: "client",
+  oneLiner:
+    "The production marketing site and secure waitlist backend for a pre-launch UK tax-automation fintech — plus a full audit of its AI-generated codebase.",
+  summary:
+    "A pre-launch fintech (AI cash-flow forecasting + HMRC Making Tax Digital) needed a fast, credible marketing site, a secure waitlist, and the SEO / accessibility / legal groundwork to launch on — built on a stack the team could extend toward the product. I delivered the site, wired a server-side waitlist that never exposes API keys, audited the AI-generated codebase end-to-end, and scoped the HMRC MTD integration for the product phase.",
+  tags: ["React 19", "TanStack Start", "Tailwind v4", "shadcn/ui", "Serverless", "Fintech"],
+  metrics: [
+    { label: "Scope", value: "Site + waitlist + audit" },
+    { label: "Stack", value: "React 19 · TanStack Start" },
+    { label: "Status", value: "Live · pre-launch" },
+  ],
+  problem:
+    "Clarivance AI is pre-launch — the AI forecasting and tax-filing engine is still to be built. What they needed first was a marketing site that could explain the product, capture a waitlist, and stand up legal / SEO foundations, on a modern stack the team could keep building on. The starting codebase was AI-generated (Lovable) and needed verifying before it could be trusted in production.",
+  approach: [
+    "Delivered the marketing site on React 19 + TanStack Start with SSR and route pre-rendering for fast first paint.",
+    "Replaced a brittle external form proxy with a server-side serverless waitlist — the Airtable API token stays on the server, never in the browser.",
+    "Added per-page SEO with JSON-LD structured data, a generated sitemap, accessibility passes, and UK-GDPR legal pages (privacy / terms / cookies).",
+    "Ran a full audit of the AI-generated codebase and fixed build, routing and configuration issues; corrected an out-of-date MTD timeline in the content.",
+    "Scoped the real product integration — HMRC Making Tax Digital API: OAuth2 via Government Gateway plus the mandatory fraud-prevention headers and the sandbox-to-production approval path.",
+  ],
+  stack: ["React 19", "TanStack Start", "Vite 7", "Tailwind v4", "shadcn/ui", "TypeScript", "Vercel Functions", "Airtable"],
+  outcomes: [
+    "A production marketing site the client can launch and keep extending toward the product.",
+    "Waitlist capture with no secrets exposed in the browser.",
+    "An audited codebase with the regulatory-timeline content corrected.",
+    "A clear, costed path for the HMRC MTD integration when the product build begins.",
+  ],
+  links: [
+    { label: "Live site", href: "https://clarivanceai.co.uk" }, // ← confirm the real live URL
+    { label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/clarivance-ai" },
+  ],
+  highlight: false,
+  },
   {
     slug: "uk-sponsorship-map",
-    number: "08",
+    number: "09",
     title: "UK Visa Sponsorship Companies Map",
     client: "Open-source tool",
     year: "2024",
@@ -347,7 +388,7 @@ export const projects: Project[] = [
   },
   {
     slug: "aapl-risk-analysis",
-    number: "09",
+    number: "10",
     title: "AAPL Multi-Horizon Risk Analysis",
     client: "Personal research · finance module spin-out",
     year: "2025",
@@ -380,7 +421,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gurucool-recsys",
-    number: "10",
+    number: "11",
     title: "Gurucool Recommendation System",
     client: "Gurucool XYZ Pvt Ltd",
     year: "2022–23",
@@ -413,7 +454,7 @@ export const projects: Project[] = [
   },
   {
     slug: "alzheimers-mri",
-    number: "11",
+    number: "12",
     title: "Alzheimer's Detection from Brain Scans",
     client: "BSc Final Project · Jamia Millia Islamia",
     year: "2023",

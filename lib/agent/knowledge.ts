@@ -52,7 +52,7 @@ export const EXPERIENCE = [
     period: "May 2025 – Present",
     location: "Egham, UK",
     summary:
-      "UK AI consultancy he co-founded. Ships marketplaces, payment infrastructure, and AI agents for founders and SMBs. Six paid clients to date including Clock-in Pro, MummyHelp, HEART-Eco, Sartorial London, and others.",
+      "UK AI consultancy he co-founded. Ships marketplaces, payment infrastructure, and AI agents for founders and SMBs. Eight paid clients to date including Clock-in Pro, MummyHelp, HEART-Eco, Sartorial London, and others.",
   },
   {
     role: "AI Content Analyst (Contract)",
@@ -107,6 +107,30 @@ export const PROJECTS = [
   ],
   links: [{ label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/weft-passport" }],
   stack: "Next.js 14 + TypeScript + Supabase (Postgres, Auth, Row-Level Security), deployed on Vercel",
+  },
+  {
+  name: "Clarivance AI",
+  type: "Paid client project (via Autostrata)",
+  year: "2026",
+  oneLiner:
+    "The production marketing site and secure waitlist backend for a pre-launch UK tax-automation fintech, plus a full audit of its AI-generated codebase.",
+  description: [
+    "A marketing and waitlist site for a pre-launch UK fintech building AI cash-flow forecasting and HMRC Making Tax Digital automation. The product engine itself is not yet built — Taiyab delivered the site, the waitlist backend, and the audit, and scoped the HMRC integration for the product phase.",
+    "Built on React 19 + TanStack Start with server-side rendering and route pre-rendering.",
+    "Server-side serverless waitlist (Vercel Functions to Airtable) so the API token never reaches the browser.",
+    "Audited the AI-generated (Lovable) codebase end-to-end; fixed build, routing and configuration issues and corrected a stale MTD regulatory timeline in the content.",
+    "Scoped the HMRC Making Tax Digital API integration: OAuth2 via Government Gateway plus mandatory fraud-prevention headers — designed but not yet built.",
+  ],
+  metrics: [
+    "Built on a modern, extensible stack (React 19 + TanStack Start, Tailwind v4, shadcn/ui).",
+    "HMRC MTD filing is a regulated integration scoped for the product phase, not a shipped website feature.",
+  ],
+  links: [
+    { label: "Live site", href: "https://clarivanceai.co.uk" },
+    { label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/clarivance-ai" },
+  ],
+  stack:
+    "React 19 + TanStack Start (SSR + pre-render), Tailwind v4, shadcn/ui, TypeScript; serverless waitlist on Vercel Functions → Airtable",
   },
   {
     name: "MummyHelp",

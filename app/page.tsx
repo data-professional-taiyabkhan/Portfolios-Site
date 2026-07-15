@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Marquee from "@/components/Marquee";
+import ThreeTools from "@/components/ThreeTools";
 import Work from "@/components/Work";
-import Research from "@/components/Research";
-import Stack from "@/components/Stack";
+import SideQuests from "@/components/SideQuests";
+import About from "@/components/About";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -11,10 +11,10 @@ export default function Home() {
     <main>
       <Hero />
       <Marquee />
-      <About />
+      <ThreeTools />
       <Work />
-      <Research />
-      <Stack />
+      <SideQuests />
+      <About />
       <Contact />
     </main>
   );

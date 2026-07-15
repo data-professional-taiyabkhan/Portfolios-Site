@@ -2,19 +2,19 @@
 
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github, ArrowUpRight, Globe, FileText } from "lucide-react";
+import { focusAgentStage } from "@/lib/focus-agent-stage";
 
 export default function Contact() {
   return (
     <section id="contact" className="relative py-32 md:py-48 px-6 md:px-10 bg-ink text-paper overflow-hidden">
       <div className="absolute inset-0 pointer-events-none opacity-[0.06]" aria-hidden>
-        <div className="absolute -top-40 -left-20 w-[600px] h-[600px] rounded-full bg-accent blur-3xl" />
+        <div className="absolute -top-40 -left-20 w-[600px] h-[600px] rounded-full bg-signal blur-3xl" />
         <div className="absolute -bottom-40 -right-20 w-[600px] h-[600px] rounded-full bg-moss blur-3xl" />
       </div>
 
       <div className="relative max-w-[1400px] mx-auto">
         <div className="flex items-baseline gap-6 mb-12 md:mb-16">
-          <span className="font-display italic text-display-md text-accent-soft">v.</span>
-          <span className="eyebrow !text-paper/60">Get in touch</span>
+          <span className="eyebrow !text-paper/60">05 — Get in touch</span>
           <div className="flex-1 h-px bg-paper/20" />
         </div>
 
@@ -23,10 +23,10 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-display text-display-xl leading-[0.95] mb-12 md:mb-20"
+          className="font-display font-extrabold text-display-xl leading-[1.05] mb-12 md:mb-20 max-w-[640px]"
         >
-          Let&apos;s build <br />
-          <span className="italic text-accent-soft">something useful.</span>
+          Skip the contact form.{" "}
+          <span className="text-signal-soft">The agent books straight into my calendar.</span>
         </motion.h2>
 
         <div className="grid md:grid-cols-12 gap-12 mb-20">
@@ -34,7 +34,14 @@ export default function Contact() {
             <p className="text-xl md:text-2xl leading-relaxed text-paper/85 max-w-2xl">
               I&apos;m available for full-time data, ML, or AI engineering roles, and for freelance / contract work via Autostrata. Always happy to hear about research opportunities too.
             </p>
-            <div className="mt-10 inline-flex items-center gap-3 px-5 py-3 border border-paper/20 rounded-full">
+            <button
+              type="button"
+              onClick={focusAgentStage}
+              className="mt-10 inline-flex items-center gap-2 px-5 py-3 bg-paper text-ink rounded-full font-semibold text-sm transition-colors hover:bg-signal"
+            >
+              Talk to the agent ↑
+            </button>
+            <div className="mt-4 inline-flex items-center gap-3 px-5 py-3 border border-paper/20 rounded-full">
               <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse" />
               <span className="text-sm">
                 Available · Egham, Surrey · UK

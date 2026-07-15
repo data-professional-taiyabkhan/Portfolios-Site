@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Script from "next/script";
+import { MotionConfig } from "framer-motion";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
 import Nav from "@/components/Nav";
@@ -35,10 +36,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Cursor />
-        <Nav />
-        {children}
-        <AgentLauncher />
+        <MotionConfig reducedMotion="user">
+          <Cursor />
+          <Nav />
+          {children}
+          <AgentLauncher />
+        </MotionConfig>
         <Analytics />
         <Script
           id="microsoft-clarity"

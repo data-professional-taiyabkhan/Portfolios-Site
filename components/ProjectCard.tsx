@@ -90,7 +90,7 @@ export function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-function CaseStudyModal({
+export function CaseStudyModal({
   project,
   open,
   onClose,

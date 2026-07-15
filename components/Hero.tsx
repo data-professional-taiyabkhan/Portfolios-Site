@@ -1,153 +1,169 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
-import { ArrowDownRight, MapPin } from "lucide-react";
-
-const STAGES = ["idea", "demo", "deployed"];
+import { motion } from "framer-motion";
+import { focusAgentStage } from "@/lib/focus-agent-stage";
+import AgentStage from "./AgentStage";
 
 export default function Hero() {
-  const [activeStage, setActiveStage] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
-
-  useEffect(() => {
-    const id = setInterval(() => setActiveStage((s) => (s + 1) % STAGES.length), 2200);
-    return () => clearInterval(id);
-  }, []);
-
-  const openAgent = () => {
-    if (typeof window !== "undefined") {
-      window.dispatchEvent(new CustomEvent("open-agent-drawer"));
-    }
-  };
-
   return (
-    <section
-      id="top"
-      ref={ref}
-      className="relative min-h-[100svh] flex flex-col justify-between pt-32 pb-12 px-6 md:px-10 overflow-hidden"
-    >
-      <div className="absolute inset-0 pointer-events-none" aria-hidden>
-        <div className="absolute top-1/3 left-0 right-0 h-px bg-line opacity-50" />
-        <div className="absolute top-2/3 left-0 right-0 h-px bg-line opacity-30" />
-      </div>
+    <header id="top" className="relative pt-32 pb-8 px-6 md:px-10">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 min-[1020px]:grid-cols-[5fr_6fr] gap-10 min-[1020px]:gap-14 items-center">
+          {/* left column */}
+          <div>
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="eyebrow inline-flex items-center gap-2 mb-6"
+            >
+              <span className="inline-flex items-center gap-1.5 text-moss">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-moss" />
+                Available for work
+              </span>
+              <span>&nbsp;·&nbsp; Egham · Surrey · UK</span>
+            </motion.span>
 
-      <motion.div style={{ opacity, y }} className="relative z-10 max-w-[1400px] w-full mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center justify-between flex-wrap gap-4 mb-10 md:mb-16"
-        >
-          <span className="eyebrow flex items-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse" />
-            Available for work
-          </span>
-          <span className="eyebrow flex items-center gap-1.5">
-            <MapPin className="w-3 h-3" /> Egham · Surrey · UK
-          </span>
-        </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative w-fit mb-8"
+            >
+              <span
+                aria-hidden
+                className="absolute -top-[11px] left-1/2 -translate-x-1/2 rotate-[2deg] w-[86px] h-6 bg-signal/30 border-x border-dashed border-ink/15 z-10"
+              />
+              <figure className="relative w-[218px] bg-[#FDFCF8] p-2.5 pb-3.5 border border-line shadow-[0_14px_34px_-12px_rgba(16,21,28,0.35)] rotate-[-2.4deg] transition-transform duration-300 hover:rotate-[-0.6deg]">
+                <img
+                  src="/portrait.jpg"
+                  alt="Mohammad Taiyab Khan in London, 2025"
+                  className="block w-full h-auto saturate-[0.94] contrast-[1.02]"
+                />
+                <figcaption className="mt-2.5 font-mono text-[0.58rem] tracking-[0.16em] uppercase text-mute flex justify-between">
+                  <span>The human</span>
+                  <span>London · 2025</span>
+                </figcaption>
+              </figure>
 
-        <div className="space-y-2 md:space-y-1">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.3 }}
-            className="font-display text-display-xl"
-          >
-            Mohammad
-          </motion.h1>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.45 }}
-            className="font-display text-display-xl italic text-accent"
-          >
-            Taiyab Khan.
-          </motion.h1>
-        </div>
+              <svg
+                className="hidden min-[1020px]:block absolute left-[calc(100%+6px)] top-[44%] w-[170px]"
+                viewBox="0 0 170 60"
+                aria-hidden
+              >
+                <path
+                  d="M4,30 C 60,30 100,14 158,14"
+                  fill="none"
+                  stroke="currentColor"
+                  className="text-ink opacity-55 animate-wire-flow"
+                  strokeWidth={1.5}
+                  strokeDasharray="6 5"
+                />
+                <circle cx={4} cy={30} r={3.5} className="fill-signal" />
+                <circle cx={158} cy={14} r={3.5} className="fill-signal" />
+                <text x={34} y={48} className="fill-mute font-mono" fontSize={9.5} letterSpacing="0.12em">
+                  trained on this guy →
+                </text>
+              </svg>
+            </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          className="mt-12 md:mt-20 flex items-baseline gap-3 md:gap-6 flex-wrap"
-        >
-          <span className="eyebrow">I build AI products that move from</span>
-          <div className="flex items-baseline gap-3 md:gap-6">
-            {STAGES.map((stage, i) => (
-              <div key={stage} className="flex items-baseline gap-3">
-                <span
-                  className={`font-display text-display-md transition-all duration-700 ${
-                    activeStage === i ? "text-ink scale-100" : "text-mute/40 scale-95"
-                  }`}
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="font-display font-extrabold text-display-xl leading-[1.02]"
+            >
+              Mohammad
+              <br />
+              Taiyab Khan
+              <span className="text-signal">.</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="font-display font-semibold text-display-md text-ink-soft mt-4"
+            >
+              I build AI products that move from{" "}
+              <b className="text-ink font-extrabold">
+                idea → demo → <span className="text-signal">deployed</span>
+              </b>
+              .
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="mt-[18px] text-base text-ink-soft max-w-[480px]"
+            >
+              Data &amp; AI Engineer, Co-Founder at Autostrata.ai — and this portfolio runs
+              on my own work. Don&apos;t just read about it,{" "}
+              <span className="relative whitespace-nowrap font-semibold text-ink">
+                interview it
+                <svg
+                  className="absolute -left-[2%] -bottom-[0.18em] w-[104%] h-[0.32em] overflow-visible"
+                  viewBox="0 0 300 20"
+                  preserveAspectRatio="none"
+                  aria-hidden
                 >
-                  {stage}
-                </span>
-                {i < STAGES.length - 1 && <span className="text-mute text-2xl">→</span>}
-              </div>
-            ))}
-          </div>
-        </motion.div>
+                  <path d="M4,14 C 70,6 190,4 296,11" fill="none" stroke="currentColor" className="text-signal" strokeWidth={3.4} strokeLinecap="round" />
+                </svg>
+              </span>
+              . The console is live: it knows everything I&apos;ve shipped, books straight
+              into my real calendar, and takes messages that reach my inbox.
+            </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
-          className="mt-14 md:mt-24 grid md:grid-cols-12 gap-6 items-end"
-        >
-          <div className="md:col-span-6 max-w-2xl">
-            <p className="text-lg md:text-xl text-ink-soft leading-relaxed">
-              Data &amp; AI Engineer. Co-Founder at{" "}
-              <a href="https://autostrata.ai" target="_blank" rel="noreferrer" className="text-accent link">
-                Autostrata.ai
-              </a>
-              . Royal Holloway MSc, Merit. Published researcher. Currently shipping ML and full-stack products for paid clients.
-            </p>
-            <p className="mt-5 text-sm text-mute flex items-center gap-2 flex-wrap">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-moss animate-pulse" />
-              <span>Got a question?</span>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-[26px] flex gap-3 flex-wrap"
+            >
               <button
                 type="button"
-                onClick={openAgent}
-                className="text-accent font-medium underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors"
+                onClick={focusAgentStage}
+                className="text-sm font-semibold rounded-full px-5 py-[11px] bg-ink text-paper transition-colors hover:bg-signal hover:text-ink"
               >
-                Try the AI version of me
+                Interview the AI ↗
               </button>
-              <span>in the corner ↘</span>
-            </p>
+              <a
+                href="#work"
+                className="text-sm font-semibold rounded-full px-5 py-[11px] border border-ink transition-colors hover:bg-ink hover:text-paper"
+              >
+                See the work
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-6 flex flex-wrap gap-x-[18px] gap-y-2 font-mono text-[0.7rem] tracking-wide text-mute"
+            >
+              <span>
+                MSc Data Science · <b className="text-ink font-medium">Royal Holloway, Merit</b>
+              </span>
+              <span>
+                Published researcher · <b className="text-ink font-medium">Zenodo</b>
+              </span>
+              <span>
+                <b className="text-ink font-medium">6</b> paid clients shipped
+              </span>
+            </motion.div>
           </div>
 
-          <div className="md:col-span-5 md:col-start-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-end">
-            <a
-              href="#work"
-              className="group flex items-center gap-2 px-6 py-3 bg-ink text-paper rounded-full hover:bg-accent transition-colors duration-300"
-            >
-              View selected work
-              <ArrowDownRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
-            </a>
-            <a
-              href="#research"
-              className="group flex items-center gap-2 px-6 py-3 border border-ink rounded-full hover:bg-ink hover:text-paper transition-colors duration-300"
-            >
-              Read research
-            </a>
-          </div>
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="relative z-10 flex items-center justify-between max-w-[1400px] mx-auto w-full mt-10"
-      >
-        <span className="eyebrow">Scroll</span>
-        <span className="eyebrow tabular-nums">©{new Date().getFullYear()} · Folio v1.0</span>
-      </motion.div>
-    </section>
+          {/* right column: the live agent console */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <AgentStage />
+          </motion.div>
+        </div>
+      </div>
+    </header>
   );
 }

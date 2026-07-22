@@ -6,7 +6,7 @@ const items = [
   "Co-Founder · Autostrata.ai",
   "Currently building in the UK",
   "Published in Zenodo",
-  "Six paid clients shipped",
+  "7 paid builds delivered",
 ];
 
 export default function Marquee() {

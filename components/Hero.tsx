@@ -149,7 +149,7 @@ export default function Hero() {
                 Published researcher · <b className="text-ink font-medium">Zenodo</b>
               </span>
               <span>
-                <b className="text-ink font-medium">6</b> paid clients shipped
+                <b className="text-ink font-medium">7</b> paid builds delivered
               </span>
             </motion.div>
           </div>

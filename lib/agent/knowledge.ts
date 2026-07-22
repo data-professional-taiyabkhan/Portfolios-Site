@@ -52,7 +52,7 @@ export const EXPERIENCE = [
     period: "May 2025 – Present",
     location: "Egham, UK",
     summary:
-      "A two-person AI product studio he co-founded; he leads all engineering — designing, building, and running production systems end-to-end. Paid client work includes MummyHelp, HEART-Eco, Sartorial London, Weft Passport, and Clarivance AI. Also builds and productises Autostrata's own tools, like Clock-in Pro.",
+      "A two-person AI product studio he co-founded; he leads all engineering — designing, building, and running production systems end-to-end. Paid engagements include MummyHelp, HEART-Eco, Sartorial London, Weft Passport, and Clarivance AI. Also builds and productises Autostrata's own tools, like Clock-in Pro.",
   },
   {
     role: "AI Content Analyst (Contract)",
@@ -68,7 +68,7 @@ export const EXPERIENCE = [
     period: "Jan 2022 – Aug 2023",
     location: "New Delhi, India",
     summary:
-      "Part-time alongside his BSc and IIT diploma. Built a hybrid recommendation system (collaborative + content-based filtering) for the BITS short-form content feature, co-authoring a research paper on the methodology. Integrated OpenAI GPT API for in-app Q&A during the early ChatGPT era. Built Power BI dashboards for senior management.",
+      "Part-time alongside his BSc, at an early-stage startup whose app reached roughly 50,000 monthly active users within months of launch — a team/company outcome, not his individual metric. Built a Python hybrid recommendation system (collaborative + content-based) for the app's BITS short-form feature, and co-authored an internal, unpublished research paper on the methodology (never released publicly — never say it was published or independently reviewed). Integrated the OpenAI GPT API for an in-app Q&A chatbot during the early ChatGPT era. Ran Power BI reporting and behaviour analytics (Google Analytics, Hotjar, Microsoft Clarity).",
   },
 ];
 
@@ -89,7 +89,7 @@ export const PROJECTS = [
   },
   {
   name: "Weft Passport",
-  type: "Paid client project (via Autostrata)",
+  type: "Paid engagement (via Autostrata)",
   year: "2026",
   oneLiner:
     "A SKU-level textile-provenance and compliance platform for handwoven South Asian textiles.",
@@ -107,7 +107,7 @@ export const PROJECTS = [
   },
   {
   name: "Clarivance AI",
-  type: "Paid client project (via Autostrata)",
+  type: "Paid engagement (via Autostrata)",
   year: "2026",
   oneLiner:
     "The production marketing site and secure waitlist backend for a pre-launch UK tax-automation fintech, plus a full audit of its AI-generated codebase.",
@@ -146,22 +146,23 @@ export const PROJECTS = [
   },
   {
     name: "HEART-Eco",
-    type: "Paid client project (via Autostrata)",
+    type: "Paid engagement (via Autostrata)",
     year: "2025–26",
     oneLiner:
       "Commissioned by an academic researcher. A dashboard that turns a multi-pillar economic scoring model into an interactive analyst.",
     stack:
-      "Next.js 14 + TypeScript + Tailwind + Recharts dashboard, with an OpenAI Assistants \"Ask AI\" panel grounded only in the model's own data — closed knowledge boundary, never the open web. Deployed on Vercel.",
+      "Next.js 14 + TypeScript + Tailwind + Recharts dashboard, with an OpenAI Assistants \"Ask AI\" panel grounded only in the model's own data — closed knowledge boundary, never the open web. Plus a supporting ensemble ML model predicting the HEART score. Deployed on Vercel.",
     metrics: [
       "Forecast horizon: 2026–2030 country projections",
       "Closed knowledge boundary prevents the AI from pulling in outside facts",
+      "Supporting ensemble ML model predicting the HEART score",
       "Live at heart-eco.vercel.app",
     ],
     link: "https://heart-eco.vercel.app",
   },
   {
     name: "Sartorial London",
-    type: "Paid client project (via Autostrata)",
+    type: "Paid engagement (via Autostrata)",
     year: "2025-26",
     oneLiner:
       "Custom Sharetribe Flex marketplace for designer outfit rentals with fixed 5-day windows and Stripe security-deposit flow.",
@@ -234,16 +235,18 @@ export const PROJECTS = [
   },
   {
     name: "Gurucool Recommendation System",
-    type: "Industry work (Gurucool XYZ Pvt Ltd)",
+    type: "Industry work, part-time (Gurucool XYZ Pvt Ltd)",
     year: "2022–23",
     oneLiner:
-      "Hybrid recommendation engine (collaborative + content-based) for short-form educational content.",
-    stack: "Python, Pandas, scikit-learn, OpenAI API (Davinci, Babbage, Ada, GPT-3.5 Turbo), Power BI.",
+      "Part-time Data Analyst alongside his BSc, at an early-stage startup whose app reached ~50,000 MAU within months of launch (a team outcome, not his individual metric).",
+    stack:
+      "Python, Pandas, scikit-learn, OpenAI API (Davinci, Babbage, Ada, GPT-3.5 Turbo), Power BI, Google Analytics, Hotjar, Microsoft Clarity.",
     metrics: [
-      "User engagement +50%",
-      "Customer churn −40%",
-      "Customer lifetime value +15%",
-      "Co-authored a research paper on the methodology",
+      "App reached ~50,000 MAU within months of launch — a team/company outcome, not his individual metric",
+      "Built a Python hybrid recommendation system (collaborative + content-based) for the BITS short-form feature",
+      "Integrated the OpenAI GPT API for an in-app Q&A chatbot in the early ChatGPT era",
+      "Ran Power BI reporting and behaviour analytics (Google Analytics, Hotjar, Microsoft Clarity)",
+      "Co-authored an internal, unpublished research paper on the recommender's methodology — never released publicly; do not describe it as published or independently reviewed",
     ],
     link: null,
   },
@@ -282,9 +285,9 @@ export const SOFT_FACTS = {
   philosophy:
     "Cares about whether the model answers the real question, not just the benchmark question. The EURO 2024 dissertation is a worked example of this.",
   notes: [
-    "Built the AI assistant you are currently chatting to using the same architectural pattern as the HEART AI he built for a paid client — closed knowledge boundary, strict tool routing, never uses web knowledge.",
+    "Built the AI assistant you are currently chatting to using the same architectural pattern as the HEART AI he built for a paid engagement — closed knowledge boundary, strict tool routing, never uses web knowledge.",
     "Authored the EURO 2024 sentiment analysis paper as sole author. Published on Zenodo with DOI 10.5281/zenodo.19675434.",
-    "Has shipped 6 paid client projects via Autostrata as of late 2025.",
+    "Has delivered 7 paid builds via Autostrata as of late 2025.",
   ],
 };
 

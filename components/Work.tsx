@@ -72,7 +72,7 @@ function WorkCard({
       >
         <span className="font-mono text-[0.62rem] tracking-[0.14em] uppercase text-[#8B93A1]">
           {isNew ? <b className="text-signal font-medium">New · 2026</b> : project.year}
-          {isNew && " · Paid client"}
+          {isNew && " · Paid engagement"}
         </span>
         <h3 className="font-display font-semibold text-xl text-[#F3EFE6]">{project.title}</h3>
         <p className="text-[0.88rem] text-[#B9BFC9] flex-1">{project.oneLiner}</p>

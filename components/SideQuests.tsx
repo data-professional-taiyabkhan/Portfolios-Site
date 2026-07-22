@@ -37,7 +37,7 @@ export default function SideQuests() {
           the binary classifier buried the real signal.&rdquo;
         </motion.blockquote>
         <span className="block font-mono text-[0.64rem] tracking-[0.1em] uppercase text-mute pl-[25px] mb-11">
-          From my MSc dissertation, now a peer-reviewed preprint on Zenodo
+          From my MSc dissertation, now a preprint on Zenodo
         </span>
 
         <div>

@@ -342,7 +342,7 @@
     <span>Royal Holloway MSc · Merit</span><span>✦</span>
     <span>Published on Zenodo</span><span>✦</span>
     <span>Co-Founder · Autostrata.ai</span><span>✦</span>
-    <span>99.6% uptime in production</span><span>✦</span>
+    <span>Face-verified attendance, live pre-launch</span><span>✦</span>
   </div>
 </div>
 
@@ -420,22 +420,20 @@
         </div>
       </div>
       <div class="work-card reveal">
-        <span class="yr">2025 · Paid client</span>
+        <span class="yr">2025–26 · Live pre-launch</span>
         <h3>Clock-in Pro</h3>
-        <p>Face-verified, GPS-geofenced attendance for 45 employees across 3 sites.</p>
+        <p>Face-verified, GPS-geofenced attendance for small businesses.</p>
         <div class="work-stats">
-          <div><b>−83%</b><span>fake clock-ins</span></div>
-          <div><b>−72%</b><span>payroll errors</span></div>
-          <div><b>99.6%</b><span>uptime</span></div>
+          <div><b>Live</b><span>pre-launch</span></div>
+          <div><b>face-api.js</b><span>TensorFlow.js</span></div>
         </div>
       </div>
       <div class="work-card reveal">
-        <span class="yr">2025 · Paid client</span>
+        <span class="yr">2025 · Commissioned prototype</span>
         <h3>MummyHelp</h3>
-        <p>Voice-activated SOS app with on-device wake-word and speaker verification.</p>
+        <p>Voice-activated SOS app with on-device wake-word detection.</p>
         <div class="work-stats">
-          <div><b>96.8%</b><span>wake-word acc.</span></div>
-          <div><b>3.5s</b><span>SOS delivery</span></div>
+          <div><b>~3–4s</b><span>SOS delivery (device testing)</span></div>
         </div>
       </div>
       <div class="work-card reveal">
@@ -462,7 +460,7 @@
       </div>
     </div>
     <blockquote class="quote reveal">"The model with the worst benchmark score succeeded where the best one failed — because 79% of football tweets are actually neutral, and the binary classifier buried the real signal."</blockquote>
-    <span class="quote-src reveal">From my MSc dissertation, now a peer-reviewed preprint on Zenodo</span>
+    <span class="quote-src reveal">From my MSc dissertation, now a preprint on Zenodo</span>
 
     <a class="quest reveal" href="#">
       <span class="yr">2025</span>
@@ -507,7 +505,7 @@
       </div>
       <div class="facts reveal">
         <div class="fact"><span>Education</span><span>MSc Data Science &amp; Analytics, Merit — Royal Holloway</span></div>
-        <div class="fact"><span>Research</span><span>Peer-reviewed preprint · Zenodo</span></div>
+        <div class="fact"><span>Research</span><span>Preprint · Zenodo</span></div>
         <div class="fact"><span>Clients</span><span>6 paid clients shipped via Autostrata</span></div>
         <div class="fact"><span>Visa</span><span>UK Graduate Visa → Jan 2027 · open to sponsorship</span></div>
         <div class="fact"><span>Base</span><span>Egham, Surrey, UK</span></div>
@@ -643,7 +641,7 @@ function respond(text){
   }
   if(/(ship|work|project|built|done|portfolio|experience|lately)/.test(q)){
     showTyping(()=> {
-      addAgent("Six paid clients shipped so far. The latest:\n\n• Weft Passport (2026) — proof-of-origin for handwoven textiles, live in production\n• Clarivance AI (2026) — fintech site + waitlist + AI codebase audit\n• Clock-in Pro — face-verified attendance, fake clock-ins down 83%\n• MummyHelp — voice SOS app, 96.8% wake-word accuracy\n\nWant details on any of them, or should I book you time with the human version?");
+      addAgent("Six paid clients shipped so far. The latest:\n\n• Weft Passport (2026) — proof-of-origin for handwoven textiles, live in production\n• Clarivance AI (2026) — fintech site + waitlist + AI codebase audit\n• Clock-in Pro — face-verified attendance, live pre-launch\n• MummyHelp — voice SOS app, on-device wake-word detection\n\nWant details on any of them, or should I book you time with the human version?");
       setChips([
         {label:"Book a 15-min call", value:"I'd like to book a 15-min call."},
         {label:"Tell me about Weft Passport", value:"Tell me about Weft Passport"},
@@ -653,7 +651,7 @@ function respond(text){
   }
   if(/(research|paper|euro|sentiment|dissertation)/.test(q)){
     showTyping(()=> {
-      addAgent("His MSc dissertation is now a peer-reviewed preprint on Zenodo: only a domain-aware LLM prompt detected genuine sentiment shifts around EURO 2024 — because 79% of football tweets are factually neutral, which buries the signal in classical classifiers. The 'worst' benchmark model won.");
+      addAgent("His MSc dissertation is now a preprint on Zenodo: only a domain-aware LLM prompt detected genuine sentiment shifts around EURO 2024 — because 79% of football tweets are factually neutral, which buries the signal in classical classifiers. The 'worst' benchmark model won.");
       setChips(DEFAULT_CHIPS);
     });
     return;

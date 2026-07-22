@@ -54,7 +54,7 @@ export default function Research() {
           </blockquote>
           <figcaption className="md:col-span-10 md:col-start-2 text-mute text-sm mt-6">
             From <em>Predictive Power of Social Media</em>, my MSc dissertation, now a
-            peer-reviewed preprint on Zenodo.
+            preprint on Zenodo.
           </figcaption>
         </motion.figure>
 

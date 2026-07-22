@@ -9,7 +9,7 @@ const stackGroups = [
   },
   {
     label: "AI / LLMs",
-    items: ["OpenAI API", "GPT-5.1", "Assistants API", "Claude (Anthropic)", "Prompt Engineering", "RAG", "n8n", "SpeechBrain", "Picovoice", "DeepFace", "OpenCV"],
+    items: ["OpenAI API", "GPT-5.1", "Assistants API", "Claude (Anthropic)", "Prompt Engineering", "RAG", "n8n", "Picovoice"],
   },
   {
     label: "BI & Viz",

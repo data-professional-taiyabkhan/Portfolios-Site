@@ -12,7 +12,7 @@ export const PROFILE = {
   email: "mohammadtaiyabkhan21@gmail.com",
   linkedin: "https://www.linkedin.com/in/khanmohdtaiyab/",
   github: "https://github.com/data-professional-taiyabkhan",
-  company: "Autostrata.ai — UK AI consultancy he co-founded in 2025",
+  company: "Autostrata.ai — two-person AI product studio he co-founded in 2025; he leads all engineering",
   oneLiner: "I build AI products that move from idea → demo → deployed.",
   availability:
     "Currently available for full-time data, ML, or AI engineering roles in the UK (sponsor-licensed companies), and for freelance / contract work via Autostrata.",
@@ -26,7 +26,7 @@ export const EDUCATION = [
     institution: "Royal Holloway, University of London",
     years: "2023–2024",
     notes:
-      "Modules: Machine Learning, Online Machine Learning, Large-Scale Data Storage & Processing (Spark, HDFS), Data Visualisation & Exploratory Analysis, Databases, Ethical Issues in AI. Dissertation on football sentiment analysis (supervised by Prof. Daniel O'Keeffe), later published as a peer-reviewed preprint on Zenodo.",
+      "Modules: Machine Learning, Online Machine Learning, Large-Scale Data Storage & Processing (Spark, HDFS), Data Visualisation & Exploratory Analysis, Databases, Ethical Issues in AI. Dissertation on football sentiment analysis (supervised by Prof. Daniel O'Keeffe), later published as a preprint on Zenodo.",
   },
   {
     degree: "Diploma in Data Science",
@@ -47,12 +47,12 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
   {
-    role: "Co-Founder & Data/AI Engineer",
+    role: "Founding AI Engineer",
     company: "Autostrata.ai",
     period: "May 2025 – Present",
     location: "Egham, UK",
     summary:
-      "UK AI consultancy he co-founded. Ships marketplaces, payment infrastructure, and AI agents for founders and SMBs. Eight paid clients to date including Clock-in Pro, MummyHelp, HEART-Eco, Sartorial London, and others.",
+      "A two-person AI product studio he co-founded; he leads all engineering — designing, building, and running production systems end-to-end. Paid client work includes MummyHelp, HEART-Eco, Sartorial London, Weft Passport, and Clarivance AI. Also builds and productises Autostrata's own tools, like Clock-in Pro.",
   },
   {
     role: "AI Content Analyst (Contract)",
@@ -63,30 +63,27 @@ export const EXPERIENCE = [
       "Evaluated AI-generated outputs for factual accuracy, domain relevance, and quality across STEM content pipelines. Contributed to RLHF-style annotation workflows used to train downstream LLMs.",
   },
   {
-    role: "Data Analyst",
+    role: "Data Analyst (part-time)",
     company: "Gurucool XYZ Pvt Ltd",
     period: "Jan 2022 – Aug 2023",
     location: "New Delhi, India",
     summary:
-      "Led a hybrid recommendation system (collaborative + content-based filtering) that increased user engagement 50% and reduced churn 40%. Integrated OpenAI GPT API for in-app Q&A during the early ChatGPT era. Built Power BI dashboards for senior management.",
+      "Part-time alongside his BSc and IIT diploma. Built a hybrid recommendation system (collaborative + content-based filtering) for the BITS short-form content feature, co-authoring a research paper on the methodology. Integrated OpenAI GPT API for in-app Q&A during the early ChatGPT era. Built Power BI dashboards for senior management.",
   },
 ];
 
 export const PROJECTS = [
   {
     name: "Clock-in Pro",
-    type: "Paid client project (via Autostrata)",
-    year: "2026",
+    type: "Autostrata product (live pre-launch)",
+    year: "2025–26",
     oneLiner:
-      "Face-verified, GPS-geofenced attendance platform for a 45-employee operation across 3 sites.",
+      "Face-verified, GPS-geofenced attendance product for small businesses. Live pre-launch at clockinpro.autostrata.ai.",
     stack:
-      "React/TypeScript, Node/Express, PostgreSQL with Drizzle ORM, Python microservice with DeepFace and OpenCV. Deployed on Replit/Railway.",
+      "React/TypeScript, Node/Express, PostgreSQL (Neon) with Drizzle ORM, server-side face-embedding matching with face-api.js (TensorFlow.js). Deployed on Railway. Originated as a Python/DeepFace prototype Taiyab built hands-on from tutorials, before any AI-assisted development — now rebuilt as a full product.",
     metrics: [
-      "Fake clock-ins reduced 83% (12 → 2 per month)",
-      "Payroll adjustments reduced 72% (7.5% → 2.1%)",
-      "99.6% uptime",
-      "98.3% face verification accuracy",
-      "Saved ~4.5 admin hours per week",
+      "Live pre-launch, public repo, actively developed",
+      "No usage metrics exist yet — it has no live customer deployment",
     ],
     link: "https://github.com/data-professional-taiyabkhan/clock-in-pro",
   },
@@ -134,34 +131,31 @@ export const PROJECTS = [
   },
   {
     name: "MummyHelp",
-    type: "Paid client project (via Autostrata)",
+    type: "Commissioned prototype (via Autostrata)",
     year: "2025",
     oneLiner:
-      "Voice-activated SOS app where children can summon emergency help hands-free with a wake phrase.",
+      "Voice-activated SOS app where children can summon emergency help hands-free with a wake phrase. Built end-to-end and device-tested — never distributed to real users.",
     stack:
-      "React Native/Expo frontend, Node/Express backend, Supabase with Row Level Security, Python FastAPI microservice running SpeechBrain ECAPA-TDNN for speaker verification, Picovoice Porcupine for on-device wake-word detection.",
+      "React Native/Expo frontend, Node/Express + Supabase backend, on-device wake-word detection with Picovoice Porcupine, Python Flask speech service (Vosk with Google Speech fallback). Evaluated additional speaker-verification approaches before choosing on-device detection for latency and privacy — never shipped as production speaker verification.",
     metrics: [
-      "Wake-word accuracy 96.8%",
-      "SOS delivery 3.5s (61% faster than baseline)",
-      "Speaker verification FAR 1.1% / FRR 2.4%",
-      "99.3% crash-free sessions",
+      "SOS alerts reached the paired device in roughly 3–4 seconds in device testing",
       "Privacy-first: no continuous cloud streaming",
+      "Commissioned prototype, built end-to-end — no real users, never distributed",
     ],
     link: "https://github.com/data-professional-taiyabkhan/MummyHelpIA",
   },
   {
-    name: "HEART-Eco / HEART AI",
+    name: "HEART-Eco",
     type: "Paid client project (via Autostrata)",
     year: "2025–26",
     oneLiner:
-      "Agentic AI that turns Professor Khurshid Ahmad's HEART Score Economic Model into an interactive analyst. Same architectural pattern as this portfolio's AI assistant.",
+      "Commissioned by an academic researcher. A dashboard that turns a multi-pillar economic scoring model into an interactive analyst.",
     stack:
-      "Two-model architecture. Model 1: OpenAI Agent Builder for descriptive/perspective/diagnostic queries, deployed on Vercel as part of the HeartEco dashboard. Model 2: n8n workflow + GPT-5.1 for predictive forecasts grounded in ensemble ML output. Strict tool routing — numbers come from numeric master sheets only, methodology from doctrine docs, narrative from forecast commentary. Closed knowledge boundary: never uses web knowledge. Next.js 14 + TypeScript + Tailwind + Recharts dashboard.",
+      "Next.js 14 + TypeScript + Tailwind + Recharts dashboard, with an OpenAI Assistants \"Ask AI\" panel grounded only in the model's own data — closed knowledge boundary, never the open web. Deployed on Vercel.",
     metrics: [
       "Forecast horizon: 2026–2030 country projections",
-      "Strict tool routing prevents the AI from improvising facts",
-      "Two-model architecture cleanly separates explanatory and predictive workloads",
-      "Live as part of the HeartEco product, used in investor pitches",
+      "Closed knowledge boundary prevents the AI from pulling in outside facts",
+      "Live at heart-eco.vercel.app",
     ],
     link: "https://heart-eco.vercel.app",
   },
@@ -258,7 +252,7 @@ export const PROJECTS = [
     type: "BSc Final Project (Jamia Millia Islamia)",
     year: "2023",
     oneLiner: "ML classifier with computer vision techniques on MRI brain scan imagery.",
-    stack: "Python, scikit-learn, OpenCV, Pandas.",
+    stack: "Python, scikit-learn, Pandas, computer vision techniques.",
     metrics: ["84% accuracy", "F1 = 0.80"],
     link: null,
   },
@@ -268,8 +262,8 @@ export const TECH_STACK = {
   "Data & ML":
     "Python (Pandas, NumPy, scikit-learn, Matplotlib, Seaborn), R (ggplot2, dplyr), SQL, XGBoost, AdaBoost, Random Forest, Logistic Regression, K-Means, statistical inference, confidence intervals, A/B testing, time-series analysis",
   "AI / LLMs":
-    "OpenAI API (GPT-3.5/4/5.1, Assistants API), Claude (Anthropic), prompt engineering, RAG patterns, n8n automations, agentic workflows with strict tool routing, SpeechBrain ECAPA-TDNN, Picovoice Porcupine (KWS)",
-  "Deep Learning": "TensorFlow, PyTorch, Keras, HuggingFace Transformers, CNNs, computer vision (DeepFace, OpenCV)",
+    "OpenAI API (GPT-3.5/4/5.1, Assistants API), Claude (Anthropic), prompt engineering, RAG patterns, n8n automations, agentic workflows with strict tool routing, Picovoice Porcupine (KWS)",
+  "Deep Learning": "TensorFlow, PyTorch, Keras, HuggingFace Transformers, CNNs, computer vision",
   "BI & Visualisation": "Power BI, Tableau, Google Data Studio, Recharts, Matplotlib, Seaborn, ggplot2",
   "Big Data / ETL": "PySpark, MLlib, Hadoop HDFS, ETL pipeline design, BeautifulSoup web scraping",
   "Web & APIs":

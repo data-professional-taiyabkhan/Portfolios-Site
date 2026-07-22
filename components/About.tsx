@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const facts = [
   { label: "Education", value: "MSc Data Science & Analytics, Merit — Royal Holloway" },
-  { label: "Research", value: "Peer-reviewed preprint · Zenodo" },
+  { label: "Research", value: "Preprint · Zenodo" },
   { label: "Clients", value: "6 paid clients shipped via Autostrata" },
   { label: "Visa", value: "UK Graduate Visa → Jan 2027 · open to sponsorship" },
   { label: "Base", value: "Egham, Surrey, UK" },

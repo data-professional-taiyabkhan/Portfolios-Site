@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const facts = [
   { label: "Education", value: "MSc Data Science & Analytics, Merit — Royal Holloway" },
   { label: "Research", value: "Preprint · Zenodo" },
-  { label: "Clients", value: "7 paid builds delivered via Autostrata" },
-  { label: "Visa", value: "UK Graduate Visa → Jan 2027 · open to sponsorship" },
+  { label: "Paid builds", value: "7 paid builds delivered via Autostrata" },
+  { label: "Visa", value: "Right to work in the UK (Graduate Visa to Jan 2027)" },
   { label: "Base", value: "Egham, Surrey, UK" },
 ];
 
@@ -39,7 +39,7 @@ export default function About() {
               build.
             </p>
             <p className="mt-4 text-[1.02rem] text-ink-soft max-w-[560px]">
-              Today I split my time between client delivery through Autostrata.ai, original
+              Today I split my time between delivery work through Autostrata, original
               research, and data stories nobody asked for but I couldn&apos;t stop thinking
               about. Everything on this site is a live deployment, not a mockup.
             </p>

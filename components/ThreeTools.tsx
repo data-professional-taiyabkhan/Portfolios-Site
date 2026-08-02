@@ -72,7 +72,7 @@ export default function ThreeTools() {
           >
             HEART AI
           </a>
-          , a paying client&apos;s agentic analyst. Want one for your product? That&apos;s a
+          , a paid engagement&apos;s agentic analyst. Want one for your product? That&apos;s a
           very good reason to press &ldquo;Book a call&rdquo;.
         </motion.p>
       </div>

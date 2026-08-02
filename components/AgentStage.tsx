@@ -208,7 +208,7 @@ export default function AgentStage() {
         <ToolNode fns={["knowledge_base"]} via="Every project · real metrics" />
       </div>
       <p className="text-center mt-5 font-mono text-[0.66rem] tracking-[0.1em] text-mute uppercase">
-        The same agentic pattern I ship for paying clients —{" "}
+        The same agentic pattern I ship for paid builds —{" "}
         <b className="text-ink font-medium normal-case">you&apos;re the demo user</b>
       </p>
     </div>

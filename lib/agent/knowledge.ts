@@ -8,14 +8,14 @@ export const PROFILE = {
   title: "Data & AI Engineer",
   location: "Egham, Surrey, UK",
   origin: "Born in New Delhi, India. Moved to the UK in 2023 for postgrad study.",
-  visa: "UK Graduate Visa, valid until January 2027. Open to UK Skilled Worker sponsorship.",
+  visa: "Right to work in the UK (Graduate Visa to Jan 2027).",
   email: "mohammadtaiyabkhan21@gmail.com",
   linkedin: "https://www.linkedin.com/in/khanmohdtaiyab/",
   github: "https://github.com/data-professional-taiyabkhan",
-  company: "Autostrata.ai — two-person AI product studio he co-founded in 2025; he leads all engineering",
+  company: "Autostrata.ai — UK-registered product studio; he is Founding AI Engineer, leading all engineering",
   oneLiner: "I build AI products that move from idea → demo → deployed.",
   availability:
-    "Currently available for full-time data, ML, or AI engineering roles in the UK (sponsor-licensed companies), and for freelance / contract work via Autostrata.",
+    "Currently available for full-time data, ML, and AI engineering roles in the UK (sponsor-licensed companies), and for project work through Autostrata.",
   responseTime: "Usually replies within 24 hours.",
 };
 
@@ -52,7 +52,7 @@ export const EXPERIENCE = [
     period: "May 2025 – Present",
     location: "Egham, UK",
     summary:
-      "A two-person AI product studio he co-founded; he leads all engineering — designing, building, and running production systems end-to-end. Paid engagements include MummyHelp, HEART-Eco, Sartorial London, Weft Passport, and Clarivance AI. Also builds and productises Autostrata's own tools, like Clock-in Pro.",
+      "A UK-registered product studio where he is Founding AI Engineer, leading all engineering end-to-end. Paid engagements include MummyHelp, HEART-Eco, Sartorial London, Weft Passport, and Clarivance AI. Also builds and productises Autostrata's own tools, like Clock-in Pro.",
   },
   {
     role: "AI Content Analyst (Contract)",
@@ -100,7 +100,7 @@ export const PROJECTS = [
     "Full batch lifecycle wired: capture → submit → certify",],
   metrics: [
     "End-to-end loop working: a batch captured in the field becomes a scannable public provenance page plus a compliance record.",
-    "Built thin and standard by design — the client's moat is its field methodology and dataset, not the software layer.",
+    "Built thin and standard by design — the customer's moat is its field methodology and dataset, not the software layer.",
   ],
   links: [{ label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/weft-passport" }],
   stack: "Next.js 14 + TypeScript + Supabase (Postgres, Auth, Row-Level Security), deployed on Vercel",
@@ -110,24 +110,17 @@ export const PROJECTS = [
   type: "Paid engagement (via Autostrata)",
   year: "2026",
   oneLiner:
-    "The production marketing site and secure waitlist backend for a pre-launch UK tax-automation fintech, plus a full audit of its AI-generated codebase.",
+    "Recovered a business's website after their previous developer disappeared with it.",
   description: [
-    "A marketing and waitlist site for a pre-launch UK fintech building AI cash-flow forecasting and HMRC Making Tax Digital automation. The product engine itself is not yet built — Taiyab delivered the site, the waitlist backend, and the audit, and scoped the HMRC integration for the product phase.",
-    "Built on React 19 + TanStack Start with server-side rendering and route pre-rendering.",
-    "Server-side serverless waitlist (Vercel Functions to Airtable) so the API token never reaches the browser.",
-    "Audited the AI-generated (Lovable) codebase end-to-end; fixed build, routing and configuration issues and corrected a stale MTD regulatory timeline in the content.",
-    "Scoped the HMRC Making Tax Digital API integration: OAuth2 via Government Gateway plus mandatory fraud-prevention headers — designed but not yet built.",
+    "Their previous developer had hosted the site on his own server, taken payment, and vanished — leaving the business locked out of its own web presence. They still had a zip of that developer's repository. Taiyab used it to restore the site and redeploy it under their own control.",
+    "Worked from the zipped repository to get the site running again.",
+    "Redeployed it on infrastructure the business owns and can access.",
   ],
   metrics: [
-    "Built on a modern, extensible stack (React 19 + TanStack Start, Tailwind v4, shadcn/ui).",
-    "HMRC MTD filing is a regulated integration scoped for the product phase, not a shipped website feature.",
+    "Scope: recovery and redeploy.",
+    "The business owns and controls its own site again.",
   ],
-  links: [
-    { label: "Live site", href: "https://clarivanceai.co.uk" },
-    { label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/clarivance-ai" },
-  ],
-  stack:
-    "React 19 + TanStack Start (SSR + pre-render), Tailwind v4, shadcn/ui, TypeScript; serverless waitlist on Vercel Functions → Airtable",
+  stack: "Site recovery only — no new build stack.",
   },
   {
     name: "MummyHelp",
@@ -136,7 +129,7 @@ export const PROJECTS = [
     oneLiner:
       "Voice-activated SOS app where children can summon emergency help hands-free with a wake phrase. Built end-to-end and device-tested — never distributed to real users.",
     stack:
-      "React Native/Expo frontend, Node/Express + Supabase backend, on-device wake-word detection with Picovoice Porcupine, Python Flask speech service (Vosk with Google Speech fallback). Evaluated additional speaker-verification approaches before choosing on-device detection for latency and privacy — never shipped as production speaker verification.",
+      "React Native/Expo frontend, Node/Express + Supabase backend, wake-word detection via an integrated commercial engine (Picovoice Porcupine), Python Flask speech service (Vosk with Google Speech fallback). Evaluated additional speaker-verification approaches before selecting the commercial wake-word engine for latency and privacy — never shipped as production speaker verification.",
     metrics: [
       "SOS alerts reached the paired device in roughly 3–4 seconds in device testing",
       "Privacy-first: no continuous cloud streaming",
@@ -151,11 +144,11 @@ export const PROJECTS = [
     oneLiner:
       "Commissioned by an academic researcher. A dashboard that turns a multi-pillar economic scoring model into an interactive analyst.",
     stack:
-      "Next.js 14 + TypeScript + Tailwind + Recharts dashboard, with an OpenAI Assistants \"Ask AI\" panel grounded only in the model's own data — closed knowledge boundary, never the open web. Plus a supporting ensemble ML model predicting the HEART score. Deployed on Vercel.",
+      "Next.js 14 + TypeScript + Tailwind + Recharts dashboard, with an OpenAI Assistants \"Ask AI\" panel grounded only in the model's own data — closed knowledge boundary, never the open web. Plus a supporting model — linear regression averaged with a second model — predicting the HEART score. Deployed on Vercel.",
     metrics: [
       "Forecast horizon: 2026–2030 country projections",
       "Closed knowledge boundary prevents the AI from pulling in outside facts",
-      "Supporting ensemble ML model predicting the HEART score",
+      "Supporting model (linear regression averaged with a second model) predicting the HEART score",
       "Live at heart-eco.vercel.app",
     ],
     link: "https://heart-eco.vercel.app",
@@ -279,14 +272,14 @@ export const TECH_STACK = {
 
 export const SOFT_FACTS = {
   workingStyle:
-    "Solo full-stack delivery. Comfortable owning a project from prototype to production. Splits time between client delivery, original research, and personal data stories.",
+    "Solo full-stack delivery. Comfortable owning a project from prototype to production. Splits time between delivery work, original research, and personal data stories.",
   voice:
     "Honest about what works and what doesn't. Tends to lead with the failure or surprising finding before the success. Writes data stories that read like blog posts, not academic papers.",
   philosophy:
     "Cares about whether the model answers the real question, not just the benchmark question. The EURO 2024 dissertation is a worked example of this.",
   notes: [
     "Built the AI assistant you are currently chatting to using the same architectural pattern as the HEART AI he built for a paid engagement — closed knowledge boundary, strict tool routing, never uses web knowledge.",
-    "Authored the EURO 2024 sentiment analysis paper as sole author. Published on Zenodo with DOI 10.5281/zenodo.19675434.",
+    "Authored the EURO 2024 sentiment analysis paper as sole author. Preprint on Zenodo, DOI 10.5281/zenodo.19675434.",
     "Has delivered 7 paid builds via Autostrata as of late 2025.",
   ],
 };

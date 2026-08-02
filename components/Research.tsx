@@ -31,7 +31,7 @@ export default function Research() {
             about them.
           </h2>
           <p className="md:col-span-4 md:col-start-9 text-ink-soft text-lg leading-relaxed self-end">
-            Published research, personal data stories, and tools I built to solve problems
+            Research, personal data stories, and tools I built to solve problems
             I was experiencing. The work that doesn&apos;t fit on a CV bullet point.
           </p>
         </motion.div>

@@ -98,7 +98,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="mt-[18px] text-base text-ink-soft max-w-[480px]"
             >
-              Data &amp; AI Engineer, Co-Founder at Autostrata.ai — and this portfolio runs
+              Data &amp; AI Engineer, Founding AI Engineer at Autostrata — and this portfolio runs
               on my own work. Don&apos;t just read about it,{" "}
               <span className="relative whitespace-nowrap font-semibold text-ink">
                 interview it
@@ -146,7 +146,7 @@ export default function Hero() {
                 MSc Data Science · <b className="text-ink font-medium">Royal Holloway, Merit</b>
               </span>
               <span>
-                Published researcher · <b className="text-ink font-medium">Zenodo</b>
+                Preprint · <b className="text-ink font-medium">Zenodo</b>
               </span>
               <span>
                 <b className="text-ink font-medium">7</b> paid builds delivered

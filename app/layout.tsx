@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://taiyab.autostrata.ai"),
   title: "Mohammad Taiyab Khan — Data & AI Engineer",
   description:
-    "Data & AI Engineer · Co-Founder of Autostrata.ai · Royal Holloway MSc. I build AI products that move from idea to demo to deployed.",
+    "Data & AI Engineer · Founding AI Engineer at Autostrata · Royal Holloway MSc. I build AI products that move from idea to demo to deployed.",
   openGraph: {
     title: "Mohammad Taiyab Khan — Data & AI Engineer",
     description: "I build AI products that move from idea → demo → deployed.",

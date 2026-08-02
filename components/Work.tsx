@@ -6,10 +6,10 @@ import { projects } from "@/data/projects";
 import { CaseStudyModal } from "./ProjectCard";
 import { focusAgentStage } from "@/lib/focus-agent-stage";
 
-// Per the landing-v2 brief: Weft Passport and Clarivance AI lead (both "New · 2026"),
-// then HEART, Clock-in Pro, MummyHelp, EURO 2024 — an explicit slug order, not just `highlight`.
-const WORK_SLUGS = ["weft-passport", "clarivance-ai", "heart-eco", "clock-in-pro", "mummyhelp", "euro-2024-paper"];
-const NEW_SLUGS = new Set(["weft-passport", "clarivance-ai"]);
+// Per the landing-v2 brief: Weft Passport leads ("New · 2026"), then Sartorial London,
+// HEART, Clock-in Pro, MummyHelp, EURO 2024 — an explicit slug order, not just `highlight`.
+const WORK_SLUGS = ["weft-passport", "sartorial-london", "heart-eco", "clock-in-pro", "mummyhelp", "euro-2024-paper"];
+const NEW_SLUGS = new Set(["weft-passport"]);
 
 const workCards = WORK_SLUGS.map((slug) => projects.find((p) => p.slug === slug)!);
 

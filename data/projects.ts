@@ -38,7 +38,7 @@ export const projects: Project[] = [
     { label: "Avg cost/turn", value: "~$0.005" },
   ],
   problem:
-    "A portfolio's job is to make a recruiter or client think 'I want to talk to this person.' Most portfolios then make that next step painful — find the email, write the email, hope for a reply. I wanted one chat surface that could answer questions, check my actual calendar, and book a call without the user leaving the page.",
+    "A portfolio's job is to make a recruiter or potential customer think 'I want to talk to this person.' Most portfolios then make that next step painful — find the email, write the email, hope for a reply. I wanted one chat surface that could answer questions, check my actual calendar, and book a call without the user leaving the page.",
   approach: [
     "Vercel AI SDK with Claude Haiku 4.5 via OpenRouter for the agent loop with tool-calling.",
     "Closed knowledge boundary: a hand-curated knowledge base is the agent's only source of truth. No web search, no general knowledge.",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
   role: "Solo full-stack engineer",
   category: "client",
   oneLiner:
-    "SKU-level proof-of-origin for handwoven textiles — so ethical fashion brands can prove their claims before EU law forces them to.",
+    "SKU-level proof-of-origin for handwoven textiles, so ethical fashion brands can prove their claims.",
   summary:
     "A provenance and compliance platform for handwoven South Asian textiles. A garment's artisan, loom, place and photos are captured at source, an admin certifies the batch, and the system produces a public QR provenance page for shoppers plus a regulator-ready compliance record for the brand.",
   tags: ["Next.js 14", "TypeScript", "Supabase", "Postgres RLS", "Vercel", "Provenance / Compliance"],
@@ -85,9 +85,9 @@ export const projects: Project[] = [
   ],
   stack: ["Next.js 14", "TypeScript", "Supabase", "PostgreSQL", "Row-Level Security", "Tailwind", "Vercel"],
   outcomes: [
-    "Live in production with the founding client.",
+    "Live in production with the founding customer.",
     "End-to-end loop working: a batch captured in the field becomes a scannable public provenance page plus a compliance record.",
-    "Built thin and standard by design — the client's moat is its field methodology and dataset, not the software layer.",
+    "Built thin and standard by design — the customer's moat is its field methodology and dataset, not the software layer.",
   ],
   links: [{ label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/weft-passport" }],
   highlight: true,
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     year: "2025",
     role: "Solo full-stack engineer",
     category: "client",
-    oneLiner: "Voice-activated SOS app with on-device wake-word detection.",
+    oneLiner: "Voice-activated SOS app with wake-word detection via an integrated commercial engine.",
     summary:
       "A commissioned prototype for a safety app where children can trigger emergency alerts hands-free with a wake phrase. Built end-to-end and device-tested — never distributed to real users. Privacy-first architecture — no continuous cloud streaming.",
     tags: ["React Native", "Expo", "Node/Express", "Supabase", "Python Flask", "Vosk", "Picovoice"],
@@ -148,8 +148,8 @@ export const projects: Project[] = [
     problem:
       "Parents wanted a way for children to summon help without unlocking a phone, swiping to an app, or shouting. The hard constraint: it had to work offline-first, on-device, without sending audio to the cloud constantly. Voice in the cloud is both a battery and a privacy disaster.",
     approach: [
-      "On-device keyword spotting with Picovoice Porcupine for the wake phrase \"Hey MummyHelp\" — never sends audio off-device until triggered.",
-      "Evaluated additional speaker-verification approaches for the child's voice before settling on on-device wake-word detection for latency and privacy — never shipped as production speaker verification.",
+      "Wake-word detection via an integrated commercial engine (Picovoice Porcupine) for the wake phrase \"Hey MummyHelp\".",
+      "Evaluated additional speaker-verification approaches for the child's voice before selecting a commercial wake-word engine for latency and privacy — never shipped as production speaker verification.",
       "An earlier server-side experiment used a Python Flask speech service with Vosk (offline) and a Google Speech API fallback.",
       "React Native (Expo) frontend, Node/Express backend, Supabase (Postgres) with Row Level Security.",
     ],
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     outcomes: [
       "SOS alerts reached the paired device in roughly 3–4 seconds in device testing.",
       "Built end-to-end and tested on Taiyab's own device — no real users, never distributed.",
-      "Evaluated alternative speaker-verification approaches before choosing on-device wake-word detection for latency and privacy.",
+      "Evaluated alternative speaker-verification approaches before selecting a commercial wake-word engine for latency and privacy.",
     ],
     links: [{ label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/MummyHelpIA" }],
     highlight: true,
@@ -308,38 +308,28 @@ export const projects: Project[] = [
   title: "Clarivance AI",
   client: "Paid engagement · via Autostrata",
   year: "2026",
-  role: "Site build, code audit, HMRC integration scoping",
+  role: "Site recovery and redeployment",
   category: "client",
   oneLiner:
-    "The production marketing site and secure waitlist backend for a pre-launch UK tax-automation fintech — plus a full audit of its AI-generated codebase.",
+    "Recovered a business's website after their previous developer disappeared with it.",
   summary:
-    "A pre-launch fintech (AI cash-flow forecasting + HMRC Making Tax Digital) needed a fast, credible marketing site, a secure waitlist, and the SEO / accessibility / legal groundwork to launch on — built on a stack the team could extend toward the product. I delivered the site, wired a server-side waitlist that never exposes API keys, audited the AI-generated codebase end-to-end, and scoped the HMRC MTD integration for the product phase.",
-  tags: ["React 19", "TanStack Start", "Tailwind v4", "shadcn/ui", "Serverless", "Fintech"],
+    "Their previous developer had hosted the site on his own server, taken payment, and vanished — leaving the business locked out of its own web presence. They still had a zip of that developer's repository. I used it to restore the site and redeploy it under their own control.",
+  tags: ["Site recovery", "Redeployment"],
   metrics: [
-    { label: "Scope", value: "Site + waitlist + audit" },
-    { label: "Stack", value: "React 19 · TanStack Start" },
-    { label: "Status", value: "Live · pre-launch" },
+    { label: "Scope", value: "Recovery + redeploy" },
+    { label: "Status", value: "Live · under their own control" },
   ],
   problem:
-    "Clarivance AI is pre-launch — the AI forecasting and tax-filing engine is still to be built. What they needed first was a marketing site that could explain the product, capture a waitlist, and stand up legal / SEO foundations, on a modern stack the team could keep building on. The starting codebase was AI-generated (Lovable) and needed verifying before it could be trusted in production.",
+    "The business had paid for a website it did not control. The developer who built it had hosted it on infrastructure they had no access to, and then stopped responding. All they had left was a zip of his repository.",
   approach: [
-    "Delivered the marketing site on React 19 + TanStack Start with SSR and route pre-rendering for fast first paint.",
-    "Replaced a brittle external form proxy with a server-side serverless waitlist — the Airtable API token stays on the server, never in the browser.",
-    "Added per-page SEO with JSON-LD structured data, a generated sitemap, accessibility passes, and UK-GDPR legal pages (privacy / terms / cookies).",
-    "Ran a full audit of the AI-generated codebase and fixed build, routing and configuration issues; corrected an out-of-date MTD timeline in the content.",
-    "Scoped the real product integration — HMRC Making Tax Digital API: OAuth2 via Government Gateway plus the mandatory fraud-prevention headers and the sandbox-to-production approval path.",
+    "Worked from the zipped repository to get the site running again.",
+    "Redeployed it on infrastructure the business owns and can access.",
   ],
-  stack: ["React 19", "TanStack Start", "Vite 7", "Tailwind v4", "shadcn/ui", "TypeScript", "Vercel Functions", "Airtable"],
+  stack: [],
   outcomes: [
-    "A production marketing site the client can launch and keep extending toward the product.",
-    "Waitlist capture with no secrets exposed in the browser.",
-    "An audited codebase with the regulatory-timeline content corrected.",
-    "A clear, costed path for the HMRC MTD integration when the product build begins.",
+    "The business owns and controls its own site again.",
   ],
-  links: [
-    { label: "Live site", href: "https://clarivanceai.co.uk" }, // ← confirm the real live URL
-    { label: "GitHub", href: "https://github.com/data-professional-taiyabkhan/clarivance-ai" },
-  ],
+  links: [],
   highlight: false,
   },
   {

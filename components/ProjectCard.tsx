@@ -192,13 +192,19 @@ function Section({
   list?: string[];
   tags?: string[];
 }) {
+  const hasBody = Boolean(body);
+  const hasList = Boolean(list && list.length > 0);
+  const hasTags = Boolean(tags && tags.length > 0);
+
+  if (!hasBody && !hasList && !hasTags) return null;
+
   return (
     <div className="mb-12">
       <h3 className="eyebrow mb-4">{title}</h3>
-      {body && <p className="text-lg text-ink-soft leading-relaxed">{body}</p>}
-      {list && (
+      {hasBody && <p className="text-lg text-ink-soft leading-relaxed">{body}</p>}
+      {hasList && (
         <ul className="space-y-3">
-          {list.map((item, i) => (
+          {list!.map((item, i) => (
             <li key={i} className="text-lg text-ink-soft leading-relaxed flex gap-3">
               <span className="text-accent font-mono text-sm mt-1.5">→</span>
               <span>{item}</span>
@@ -206,9 +212,9 @@ function Section({
           ))}
         </ul>
       )}
-      {tags && (
+      {hasTags && (
         <div className="flex flex-wrap gap-2">
-          {tags.map((t) => (
+          {tags!.map((t) => (
             <span
               key={t}
               className="text-xs font-mono px-3 py-1 border border-line rounded-full text-ink-soft bg-paper-deep/30"

@@ -205,7 +205,7 @@ export default function AgentStage() {
       >
         <ToolNode fns={["check_availability()", "book_meeting()"]} via="Cal.com · 15-min slots" />
         <ToolNode fns={["leave_message()"]} via="Resend → my inbox" />
-        <ToolNode fns={["knowledge_base"]} via="Every project · real metrics" />
+        <ToolNode fns={["knowledge_base"]} via="Every project · verified claims" />
       </div>
       <p className="text-center mt-5 font-mono text-[0.66rem] tracking-[0.1em] text-mute uppercase">
         The same agentic pattern I ship for paid builds —{" "}

@@ -67,7 +67,7 @@ export const projects: Project[] = [
   oneLiner:
     "SKU-level proof-of-origin for handwoven textiles, so ethical fashion brands can prove their claims.",
   summary:
-    "A provenance and compliance platform for handwoven South Asian textiles. A garment's artisan, loom, place and photos are captured at source, an admin certifies the batch, and the system produces a public QR provenance page for shoppers plus a regulator-ready compliance record for the brand.",
+    "A provenance and compliance platform for handwoven South Asian textiles. A garment's artisan, loom, place and photos are captured at source, an admin certifies the batch, and the system produces a public QR provenance page for shoppers plus a compliance record for the brand.",
   tags: ["Next.js 14", "TypeScript", "Supabase", "Postgres RLS", "Vercel", "Provenance / Compliance"],
   metrics: [
     { label: "Modules", value: "4" },
@@ -75,13 +75,13 @@ export const projects: Project[] = [
     { label: "Status", value: "Live in production" },
   ],
   problem:
-    "Machine-made cloth is routinely sold as handwoven, and incoming regulation (EU ECGT, the textile Digital Product Passport, the UK Green Claims Code) means brands must be able to prove 'handwoven' and 'ethical-origin' claims or face penalties. There was no simple, SKU-level way to record provenance at source and hand a brand the proof.",
+    "Machine-made cloth is routinely sold as handwoven. The client's goal was to get ahead of incoming provenance and green-claims regulation — EU ECGT, the textile Digital Product Passport, the UK Green Claims Code — and be able to substantiate 'handwoven' and 'ethical-origin' claims. There was no simple, SKU-level way to record provenance at source and hand a brand the proof.",
   approach: [
     "Multi-tenant data model — artisan, household, loom, batch and SKU — with role-based access for admins, brands and field coordinators.",
     "Field verification flow to record an artisan, loom and batch with supporting photos.",
     "Batch certification lifecycle wired end-to-end: capture → submit → certify.",
     "Public consumer provenance page, readable by anonymous visitors via dedicated Postgres Row-Level Security policies, reached by a QR code.",
-    "Certification and compliance layer that turns a certified batch into a brand-facing, regulator-ready record.",
+    "Certification and compliance layer that turns a certified batch into a brand-facing compliance record.",
   ],
   stack: ["Next.js 14", "TypeScript", "Supabase", "PostgreSQL", "Row-Level Security", "Tailwind", "Vercel"],
   outcomes: [
@@ -279,7 +279,7 @@ export const projects: Project[] = [
     oneLiner: "Is the modern NBA really just more threes? The numbers say it's a structural shift.",
     summary:
       "A 29-season analysis of NBA shot selection (1996–97 → 2024–25) showing the league hasn't just shifted to more threes — it's restructured the entire shot chart.",
-    tags: ["Python", "pandas", "Data Storytelling", "Matplotlib", "nba_api"],
+    tags: ["Python", "pandas", "nba_api", "Google Colab", "Data Storytelling"],
     metrics: [
       { label: "24+ ft attempt share", value: "10.6% → 41.9%" },
       { label: "16–24 ft attempt share", value: "25.0% → 4.8%" },

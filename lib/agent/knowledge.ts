@@ -94,7 +94,7 @@ export const PROJECTS = [
   oneLiner:
     "A SKU-level textile-provenance and compliance platform for handwoven South Asian textiles.",
   description:
-    ["A SKU-level textile-provenance and compliance platform for handwoven South Asian textiles. Brands record an item's artisan, loom, place and photos, an admin certifies the batch, and the system produces a public QR provenance page for shoppers plus a regulator-ready compliance record. Built to meet incoming EU rules (ECGT, Digital Product Passport) and the UK Green Claims Code.",
+    ["A SKU-level textile-provenance and compliance platform for handwoven South Asian textiles. Brands record an item's artisan, loom, place and photos, an admin certifies the batch, and the system produces a public QR provenance page for shoppers plus a compliance record. Built to support the client's goal of readiness for incoming provenance regulation (EU ECGT, the Digital Product Passport, the UK Green Claims Code).",
     "Multi-tenant model: artisan → loom → batch → SKU, with admin / brand / coordinator roles",
     "Public consumer passport readable by anonymous visitors via Postgres RLS",
     "Full batch lifecycle wired: capture → submit → certify",],

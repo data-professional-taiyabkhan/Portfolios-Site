@@ -191,7 +191,7 @@ export const PROJECTS = [
     year: "2025",
     oneLiner:
       "29-season analysis of NBA shot selection. The modern NBA hasn't just shifted to more threes — it's restructured the entire shot chart.",
-    stack: "Python (pandas, nba_api), Matplotlib, Canva for infographic.",
+    stack: "Python (pandas, nba_api) in Google Colab; Canva for the poster.",
     metrics: [
       "24+ ft attempt share: 10.6% → 41.9% over 29 seasons (+31.2 pp)",
       "16–24 ft attempt share collapsed: 25.0% → 4.8% (−20.2 pp)",

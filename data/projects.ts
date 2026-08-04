@@ -290,9 +290,9 @@ export const projects: Project[] = [
     approach: [
       "Built a season-level dataset using Python (pandas, nba_api) covering FGA/FGM, 3PA/3PM, FG% by distance bin, and shot-distance mix.",
       "Normalised for shortened seasons (lockouts, COVID) by converting to share-of-total attempts rather than raw counts.",
-      "Produced publication-ready visuals using Matplotlib + Canva for LinkedIn-style storytelling.",
+      "Produced the poster in Canva from the exported season-level data.",
     ],
-    stack: ["Python", "pandas", "Matplotlib", "nba_api", "Canva"],
+    stack: ["Python", "pandas", "nba_api", "Google Colab", "Canva"],
     outcomes: [
       "24+ ft attempt share rose from 10.6% → 41.9% (+31.2 percentage points) over 29 seasons.",
       "16–24 ft share collapsed from 25.0% → 4.8% (−20.2 pp).",
